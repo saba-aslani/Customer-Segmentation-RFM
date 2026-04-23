@@ -135,4 +135,3 @@ jupyter notebook
 ---
 ## Author
 Saba Aslani
-Aspiring Data Analyst / Data Engineer
