@@ -109,7 +109,7 @@ Customer-Segmentation-RFM/
 ├── requirements.txt
 └── README.md
 ```
-How to Run
+## How to Run
 1. Clone the repository
 
 2. Install dependencies:
@@ -123,16 +123,16 @@ pip install -r requirements.txt
 jupyter notebook
 ```
 ---
-Key Highlights
-End-to-end business analysis project
+## Key Highlights
+* End-to-end business analysis project
 
-Combines data analysis and statistical validation
+* Combines data analysis and statistical validation
 
-Focuses on actionable insights, not just visualization
+* Focuses on actionable insights, not just visualization
 
-Designed to simulate real-world data analysis tasks
+* Designed to simulate real-world data analysis tasks
 
 ---
-Author
+## Author
 Saba Aslani
 Aspiring Data Analyst / Data Engineer
