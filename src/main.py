@@ -3,7 +3,7 @@ from transform import transform
 from load import load
 
 # Path to the dataset
-file_path = "SuperStoreOrders.csv"
+file_path = "../SuperStoreOrders.csv"
 
 # Run ETL pipeline
 df = extract(file_path)
