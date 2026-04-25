@@ -1,4 +1,4 @@
-Import sqlite3
+import sqlite3
 
 def load(df, database_name="rfm.db", table_name="rfm_table"):
     """
