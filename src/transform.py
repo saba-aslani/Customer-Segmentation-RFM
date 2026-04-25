@@ -62,7 +62,7 @@ def transform(df):
 
     # Define customer segmentation logic
     def segment_customer(row):
-        if row["R_score"] == 4 and row["F_score"] >= 4 and row["M_score"] >= 4:
+        if row["R_score"] >= 4 and row["F_score"] >= 4 and row["M_score"] >= 4:
             return "Champions"
         elif row["F_score"] >= 4:
             return "Loyal Customers"
