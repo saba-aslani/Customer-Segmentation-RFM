@@ -10,9 +10,11 @@ def transform(df):
     df.columns = df.columns.str.strip().str.lower()
 
     # Convert date columns to datetime format
-    df["order_date"] = pd.to_datetime(df["order_date"])
-    df["ship_date"] = pd.to_datetime(df["ship_date"])
+    df["order_date"] = pd.to_datetime(df["order_date"], dayfirst=True, errors="coerce")
 
+    # Convert sales to numeric
+    df["sales"] = pd.to_numeric(df["sales"], errors="coerce")
+    
     # Remove rows with missing critical values
     df = df.dropna(subset=["order_id", "order_date", "customer_name", "sales"])
 
