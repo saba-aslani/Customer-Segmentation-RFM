@@ -1,4 +1,4 @@
-Import pandas as pd
+import pandas as pd
 import datetime as dt
 
 def transform(df):
