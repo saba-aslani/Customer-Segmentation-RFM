@@ -59,6 +59,18 @@ The project is structured as a modular ETL pipeline:
 
 ---
 
+## SQL Analysis
+SQL queries were added to analyze the processed RFM data stored in SQLite.
+
+The SQL layer includes:
+* Customer count by segment
+* Revenue by segment
+* Average RFM metrics by segment
+* Top customers by spending
+* At-risk high-value customers
+
+---
+
 ## RFM Segmentation
 Customers are segmented based on their purchasing behavior:
 * **Champion**: High value, frequent buyers, and very recent.
