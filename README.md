@@ -1,137 +1,114 @@
-# Customer Segmentation and Sales Analysis with RFM
+# Customer Segmentation and Business Analysis (RFM + ETL + Dashboard)
 
 ## Overview
-
-This project analyzes customer behavior and business performance using RFM (Recency, Frequency, Monetary) analysis, sales trends, profitability analysis, and statistical testing.
-
-The goal is to identify high-value customers, understand business performance across categories and regions, and provide actionable business recommendations.
+This project is an end-to-end data analysis and data engineering solution focused on customer segmentation using RFM (Recency, Frequency, Monetary). It implements a full workflow including data extraction, feature engineering, storage in a SQL database, and an interactive dashboard for visualization.
 
 ---
 
-## Business Problem
-
-Businesses need to understand their customers and performance metrics to:
-
-* Improve customer retention
-* Increase revenue
-* Optimize marketing strategies
-* Make data-driven decisions
-
-This project answers key questions such as:
-
-* Which customers are the most valuable?
-* Which product categories generate the highest profit?
-* Which regions perform best?
-* Are profit differences across categories statistically significant?
+## Business Objective
+The goal of this project is to help businesses:
+* Identify high-value customers (VIP and Loyal groups).
+* Detect at-risk customers who haven't purchased recently.
+* Understand revenue distribution across different segments.
+* Support data-driven marketing and retention strategies.
 
 ---
 
-## Dataset
-
-The dataset contains retail transaction data, including:
-
-* CustomerID
-* Order Date
-* Category
-* Sales
-* Profit
-* Region
-
----
-
-## Methods Used
-
-* Data Cleaning and Preprocessing
-* Exploratory Data Analysis (EDA)
-* RFM Customer Segmentation
-* Profit and Profit Margin Analysis
-* ANOVA Statistical Testing
-* Data Visualization
-
----
-
-## RFM Analysis
-
-RFM stands for:
-
-* Recency: How recently a customer made a purchase
-* Frequency: How often a customer purchases
-* Monetary: How much a customer spends
-
-Customers are segmented into groups such as:
-
-* VIP Customers
-* Loyal Customers
-* Regular Customers
-* At Risk Customers
-
----
-
-## Key Insights
-
-* A small group of customers (VIP) contributes a large portion of total revenue
-* Some categories generate higher total profit, while others have higher profit margins
-* Regional analysis shows differences in performance across markets
-* Statistical testing confirms that profit differences between categories are significant
-
----
-
-## Business Recommendations
-
-* VIP Customers: Offer loyalty programs and exclusive rewards
-* Loyal Customers: Increase engagement and upsell premium products
-* At Risk Customers: Run targeted retention campaigns
-* Low-performing categories: Improve pricing or marketing strategies
+## Project Architecture
+```text
+Customer-Segmentation-RFM/
+│
+├── data/
+│   └── SuperStoreOrders.csv
+│
+├── src/
+│   ├── extract.py
+│   ├── transform.py
+│   ├── load.py
+│   └── main.py
+│
+├── app.py
+├── rfm.db
+├── rfm_customer_segmentation.ipynb
+└── README.md
+```
 
 ---
 
 ## Tech Stack
-
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-* Seaborn
-* SciPy
-* Jupyter Notebook
+* **Python** (Pandas, NumPy, SciPy)
+* **SQLite** (Database Storage)
+* **Streamlit** (Interactive Dashboard)
+* **Matplotlib / Seaborn** (Visualization)
 
 ---
 
-## Project Structure
+## ETL Pipeline
+The project is structured as a modular ETL pipeline:
 
-```text
-Customer-Segmentation-RFM/
-│
-├── notebooks/
-│   └── rfm_customer_segmentation.ipynb
-├── data/
-├── images/
-├── requirements.txt
-└── README.md
+1. **Extract**: Loads raw transaction data from CSV files.
+2. **Transform**:
+    * Cleans data and handles missing values.
+    * Converts date columns and formats numerical data.
+    * Calculates RFM metrics: **Recency**, **Frequency**, and **Monetary** value.
+    * Generates RFM scores and assigns customer segments.
+3. **Load**: Stores the final processed data into a SQLite database (`rfm.db`) for persistence.
+
+---
+
+## RFM Segmentation
+Customers are segmented based on their purchasing behavior:
+* **Champion**: High value, frequent buyers, and very recent.
+* **Loyal Customers**: Regular buyers with consistent frequency.
+* **Potential Loyalists**: Recently active customers with potential to become loyal.
+* **At Risk Customers**: Customers who haven't purchased recently (low recency score).
+* **Others**: Customers with average behavior.
+
+---
+
+## Dashboard (Streamlit)
+An interactive dashboard was built using Streamlit to visualize the results.
+
+To run the dashboard locally:
+```bash
+streamlit run app.py
 ```
-## How to Run
-1. Clone the repository
 
-2. Install dependencies:
-   
+---
+
+## Key Insights
+* A small percentage of VIP customers generates a significant portion of total revenue.
+* Customer behavior follows a long-tail distribution, requiring different marketing approaches for each segment.
+* Automated ETL pipelines ensure that customer segments stay updated as new data arrives.
+
+---
+
+## How to Run the Project
+
+1. **Clone the repository**:
+```bash
+git clone <https://github.com/saba-aslani/Customer-Segmentation-RFM>
+cd Customer-Segmentation-RFM
+```
+
+2. **Install dependencies**:
 ```bash
 pip install -r requirements.txt
 ```
-3. Open the notebook:
 
+3. **Run the ETL pipeline**:
 ```bash
-jupyter notebook
+python src/main.py
 ```
----
-## Key Highlights
-* End-to-end business analysis project
 
-* Combines data analysis and statistical validation
-
-* Focuses on actionable insights, not just visualization
-
-* Designed to simulate real-world data analysis tasks
+4. **Launch the dashboard**:
+```bash
+streamlit run app.py
+```
 
 ---
+
 ## Author
-Saba Aslani
+**Saba Aslani**
+Aspiring Data Analyst / Data Engineer
+"""
