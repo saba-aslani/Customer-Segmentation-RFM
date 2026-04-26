@@ -14,6 +14,9 @@ The goal of this project is to help businesses:
 
 ---
 
+## Dashboard preview
+<img width="771" height="863" alt="Dashboard preview" src="https://github.com/user-attachments/assets/da736df0-e0fd-4e69-b9de-85dfbbcb6a70" />
+
 ## Project Architecture
 ```text
 Customer-Segmentation-RFM/
