@@ -21,19 +21,19 @@ The goal of this project is to help businesses:
 ```text
 Customer-Segmentation-RFM/
 │
-├── data/
-│   └── SuperStoreOrders.csv
+├── SuperStoreOrders.csv
 │
 ├── src/
 │   ├── extract.py
 │   ├── transform.py
 │   ├── load.py
 │   └── main.py
-│
+├──requirements.txt
 ├── app.py
 ├── rfm.db
 ├── rfm_customer_segmentation.ipynb
 └── README.md
+
 ```
 
 ---
