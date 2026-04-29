@@ -159,7 +159,7 @@ streamlit run app.py
 5. **Run the churn model**:
 ```bash
 python churn_prediction.py
-
+```
 ---
 
 ## Author
