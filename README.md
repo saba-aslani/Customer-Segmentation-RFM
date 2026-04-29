@@ -1,7 +1,7 @@
-# Customer Segmentation and Business Analysis (RFM + ETL + Dashboard)
+# Customer Segmentation and Business Analysis (RFM + ETL + SQl + ML + Dashboard)
 
 ## Overview
-This project is an end-to-end data analysis and data engineering solution focused on customer segmentation using RFM (Recency, Frequency, Monetary). It implements a full workflow including data extraction, feature engineering, storage in a SQL database, and an interactive dashboard for visualization.
+This project is an end-to-end data analysis and data engineering solution focused on customer segmentation using RFM (Recency, Frequency, Monetary). It implements a full workflow including data extraction, feature engineering, storage in a SQL database, Machine learning for churn prediction and an interactive dashboard for visualization.
 
 ---
 
@@ -28,10 +28,15 @@ Customer-Segmentation-RFM/
 │   ├── transform.py
 │   ├── load.py
 │   └── main.py
-├──requirements.txt
+│
+├── sql/
+│   └── rfm_queries.sql
+│
+├── churn_prediction.py
 ├── app.py
 ├── rfm.db
 ├── rfm_customer_segmentation.ipynb
+├── requirements.txt
 └── README.md
 
 ```
@@ -43,6 +48,7 @@ Customer-Segmentation-RFM/
 * **SQLite** (Database Storage)
 * **Streamlit** (Interactive Dashboard)
 * **Matplotlib / Seaborn** (Visualization)
+* **Scikit-learn**
 
 ---
 
@@ -91,12 +97,41 @@ streamlit run app.py
 
 ---
 
+## Churn Prediction (Machine Learning)
+A baseline churn prediction model was built using RFM features.
+
+Approach:
+* Churn defined using customer inactivity (Recency)
+* To avoid data leakage, Recency was excluded from model features
+* Model: Random Forest
+* Features: Frequency, Monetary
+
+Results:
+* Accuracy: ~0.53
+* Indicates realistic performance
+* Monetary is the most important feature
+
+Insight:
+Customers who spend more and purchase frequently are less likely to churn.
+
+---
+
 ## Key Insights
 * A small percentage of VIP customers generates a significant portion of total revenue.
 * Customer behavior follows a long-tail distribution, requiring different marketing approaches for each segment.
 * Automated ETL pipelines ensure that customer segments stay updated as new data arrives.
-
+* SQL enables scalable analysis beyond Python
+* Machine learning extends analysis into prediction
 ---
+
+## Project Highlights
+* Built an end-to-end ETL pipeline
+* Implemented RFM customer segmentation
+* Stored data in SQLite database
+* Developed a Streamlit dashboard
+* Performed SQL-based analysis
+* Built a churn prediction model
+* Generated actionable business insights
 
 ## How to Run the Project
 
@@ -120,6 +155,10 @@ python src/main.py
 ```bash
 streamlit run app.py
 ```
+
+5. **Run the churn model**:
+```bash
+python churn_prediction.py
 
 ---
 
