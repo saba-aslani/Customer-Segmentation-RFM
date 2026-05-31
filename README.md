@@ -1,4 +1,6 @@
-# Customer Segmentation and Business Analysis (RFM + ETL + SQl + ML + Dashboard)
+# Customer Segmentation, Churn Prediction & Business Analytics Platform (RFM + ETL + SQl + ML + Dashboard)
+
+[![Live App](https://img.shields.io/badge/Live%20Demo-Streamlit-red)](https://customer-segmentation-rfm-earfpdvjqosyqkkacpjnpu.streamlit.app/)
 
 ## Overview
 This project is an end-to-end data analysis and data engineering solution focused on customer segmentation using RFM (Recency, Frequency, Monetary). It implements a full workflow including data extraction, feature engineering, storage in a SQL database, Machine learning for churn prediction and an interactive dashboard for visualization.
@@ -16,6 +18,11 @@ The goal of this project is to help businesses:
 
 ## Dashboard preview
 <img width="770" height="850" alt="churn_app" src="https://github.com/user-attachments/assets/040a80fd-8f9b-4efc-87a5-2e375dd27abf" />
+
+---
+
+## Churn Prediction app
+https://customer-segmentation-rfm-earfpdvjqosyqkkacpjnpu.streamlit.app/
 
 ---
 
