@@ -15,7 +15,9 @@ The goal of this project is to help businesses:
 ---
 
 ## Dashboard preview
-<img width="771" height="863" alt="Dashboard preview" src="https://github.com/user-attachments/assets/da736df0-e0fd-4e69-b9de-85dfbbcb6a70" />
+<img width="770" height="850" alt="churn_app" src="https://github.com/user-attachments/assets/040a80fd-8f9b-4efc-87a5-2e375dd27abf" />
+
+---
 
 ## Project Architecture
 ```text
@@ -32,6 +34,9 @@ Customer-Segmentation-RFM/
 ├── sql/
 │   └── rfm_queries.sql
 │
+├── churn_model.py
+├── churn_model.pkl
+├── app_churn.py
 ├── churn_prediction.py
 ├── app.py
 ├── rfm.db
@@ -88,7 +93,16 @@ Customers are segmented based on their purchasing behavior:
 ---
 
 ## Dashboard (Streamlit)
-An interactive dashboard was built using Streamlit to visualize the results.
+Dashboard (Streamlit)
+
+An interactive Streamlit dashboard was developed to transform analytical results into actionable business insights.
+
+Users can:
+- Explore customer behavior metrics
+- Predict churn probability in real time
+- Classify customers into risk categories
+- View retention recommendations
+- Understand the main drivers behind churn predictions
 
 To run the dashboard locally:
 ```bash
@@ -107,12 +121,39 @@ Approach:
 * Features: Frequency, Monetary
 
 Results:
-* Accuracy: ~0.53
-* Indicates realistic performance
-* Monetary is the most important feature
+Accuracy: ~0.77
+
+Feature Importance:
+1. Monetary Value
+2. Purchase Frequency
+3. M Score
+4. F Score
+
+Key Finding:
+Monetary Value was identified as the strongest predictor of customer churn within the dataset.
 
 Insight:
 Customers who spend more and purchase frequently are less likely to churn.
+
+---
+
+## Interactive Churn Prediction App
+
+The project includes a production-style prediction interface built with Streamlit.
+
+Features:
+- Real-time churn prediction
+- Churn probability scoring
+- Risk classification
+- Retention recommendations
+- Business-friendly outputs
+
+Example Output:
+Churn Probability: 43%
+Risk Level: Medium Risk
+
+Recommendation:
+Monitor this customer and consider targeted promotions or personalized offers.
 
 ---
 
@@ -125,13 +166,19 @@ Customers who spend more and purchase frequently are less likely to churn.
 ---
 
 ## Project Highlights
-* Built an end-to-end ETL pipeline
-* Implemented RFM customer segmentation
-* Stored data in SQLite database
-* Developed a Streamlit dashboard
-* Performed SQL-based analysis
-* Built a churn prediction model
-* Generated actionable business insights
+- Built an end-to-end ETL pipeline
+- Developed RFM customer segmentation
+- Designed and queried a SQLite database
+- Created an interactive Streamlit dashboard
+- Performed advanced SQL analysis
+- Built a Random Forest churn prediction model
+- Generated churn probabilities
+- Implemented customer risk classification
+- Created retention recommendation logic
+- Visualized feature importance
+- Delivered business-focused insights
+
+---
 
 ## How to Run the Project
 
@@ -153,12 +200,12 @@ python src/main.py
 
 4. **Launch the dashboard**:
 ```bash
-streamlit run app.py
+streamlit run app_churn.py
 ```
 
 5. **Run the churn model**:
 ```bash
-python churn_prediction.py
+python churn_model.py
 ```
 ---
 
