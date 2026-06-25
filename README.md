@@ -4,7 +4,7 @@
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-red)](https://customer-segmentation-rfm-earfpdvjqosyqkkacpjnpu.streamlit.app/)
 ![Python](https://img.shields.io/badge/Python-3.x-blue)
 ![SQLite](https://img.shields.io/badge/Database-SQLite-lightgrey)
-![Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-FF4B4B)
+
 
 ---
 
@@ -133,7 +133,7 @@ Profit turns negative at discounts above 20%. Recommendation: cap standard disco
 
 ## Dashboard
 
-Live dashboard allows users to explore customer segments, KPIs, and revenue trends interactively.
+Live dashboard allows users to Predict churn risk based on purchase frequency and monetary value.
 
 **[→ Open Live Demo](https://customer-segmentation-rfm-earfpdvjqosyqkkacpjnpu.streamlit.app/)**
 
@@ -144,7 +144,7 @@ git clone https://github.com/saba-aslani/Customer-Segmentation-RFM
 cd Customer-Segmentation-RFM
 pip install -r requirements.txt
 python src/main.py        # Run ETL pipeline
-streamlit run app.py      # Launch dashboard
+streamlit run app_churn.py      # Launch dashboard
 ```
 
 ---
