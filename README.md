@@ -52,7 +52,7 @@ Customer-Segmentation-RFM/
 │   └── rfm_queries.sql         # Segment analysis queries
 │
 ├── rfm_customer_segmentation.ipynb   # Full analysis notebook
-├── app.py                      # Streamlit dashboard
+├── app_churn.py                      # Streamlit dashboard
 ├── rfm.db                      # SQLite database (ETL output)
 ├── SuperStoreOrders.csv        # Source dataset
 └── requirements.txt
