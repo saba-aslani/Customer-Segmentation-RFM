@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 st.title("📊 RFM Customer Dashboard")
 
 # Load data
-conn = sqlite3.connect("src/rfm.db")
+conn = sqlite3.connect("rfm.db")
 rfm = pd.read_sql("SELECT * FROM rfm_table", conn)
 
 # Show data table
