@@ -4,7 +4,7 @@
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-red)](https://customer-segmentation-rfm-earfpdvjqosyqkkacpjnpu.streamlit.app/)
 ![Python](https://img.shields.io/badge/Python-3.x-blue)
 ![SQLite](https://img.shields.io/badge/Database-SQLite-lightgrey)
-![Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-FF4B4B](https://customer-segmentation-rfm-dashboard.streamlit.app/)
+[![Streamlit](https://img.shields.io/badge/Live%20Demo-Streamlit-red)](https://customer-segmentation-rfm-dashboard.streamlit.app/)
 
 ---
 
